@@ -1,4 +1,10 @@
 /* Custom styles for the document content area */
+/*
+  Notes:
+  - This file contains only small project-specific overrides. The project uses Tailwind for main layout.
+  - If you add custom styles, keep them scoped by ID/class to avoid conflicting with Tailwind utilities.
+  - To quickly debug visuals, open DevTools and inspect `#document-preview`.
+*/
 #document-preview {
     font-family: 'Inter', sans-serif;
     min-height: 400px;
