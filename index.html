@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Template Generator</title>
+    <!-- Load Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Set Inter font for document look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen font-[Inter]">
+
+    <!-- Load jsPDF library for client-side PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <div class="container mx-auto max-w-4xl pt-8 pb-16">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Document Template Editor</h1>
+
+        <!-- Input and Control Area -->
+        <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">Document Details</h2>
+
+            <!-- Input Fields -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <label for="docTitle" class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                    <input type="text" id="docTitle" value="Draft Report Summary" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                </div>
+                <div>
+                    <label for="docRecipient" class="block text-sm font-medium text-gray-700 mb-1">Recipient/Author</label>
+                    <input type="text" id="docRecipient" value="Project Team" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="docContent" class="block text-sm font-medium text-gray-700 mb-1">Document Content</label>
+                    <textarea id="docContent" rows="10" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 resize-y transition duration-150">Dear Project Team,
+
+This is the initial draft of the summary report. Please review the findings below and provide your feedback by the end of the week.
+
+1. Phase 1 Completion: Successfully completed on schedule.
+2. User Feedback: Generally positive, highlighting usability.
+3. Next Steps: Focus on optimizing resource allocation for Phase 2.
+
+Thank you for your hard work.
+</textarea>
+                </div>
+            </div>
+
+            <!-- Download Button -->
+            <button id="download-btn" onclick="downloadPDF()" class="w-full md:w-auto px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                Download Document as PDF
+            </button>
+        </div>
+
+        <!-- Document Preview Area -->
+        <div class="p-6 md:p-10 bg-white rounded-xl shadow-inner border border-gray-300">
+            <h2 class="text-2xl font-bold text-center text-gray-700 mb-4 border-b pb-2">Live Document Preview</h2>
+            <div id="document-preview" class="p-6 bg-gray-50 border border-dashed border-gray-300 rounded-lg">
+                <!-- Content will be injected here by JavaScript -->
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
