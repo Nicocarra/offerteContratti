@@ -231,29 +231,33 @@ async function downloadPDF() {
 
     // --- Company Info (sinistra) + Offerta (destra) ---
     doc.setFont('Helvetica');
-    doc.setFontSize(13);
+    doc.setFontSize(20);
     doc.setFont(undefined, 'bold');
     doc.text(val(docCompany, true), margin, currentY);
     doc.setFontSize(8);
     currentY += 4;
     doc.setFont(undefined, 'normal');
     doc.text(val(docAddress, true), margin, currentY);
-    doc.text(`N. ${val(docOfferNum, true)}`, pageWidth - margin, currentY, { align: 'right' });
     currentY += 4;
-
     doc.text(val(docCity, true), margin, currentY);
-    doc.text(`Ns. Referente: ${val(docRef, true)}`, pageWidth - margin, currentY, { align: 'right' });
     currentY += 4;
 
     doc.text(val(docPhone, true), margin, currentY);
-    doc.text(`Fontaniva ${val(docDate, true)}`, pageWidth - margin, currentY, { align: 'right' });
     currentY += 4;
 
     doc.setFontSize(7);
     doc.text(val(docFiscal, true), margin, currentY);
-    currentY += 8;
+    currentY += 25;
 
+    doc.setFontSize(10);
+    doc.text(`N. ${val(docOfferNum, true)}`, margin, currentY);
+    currentY += 5;
 
+    doc.text(`Ns. Referente: ${val(docRef, true)}`, margin, currentY);
+    currentY += 5;
+
+    doc.text(`Fontaniva ${val(docDate, true)}`, margin, currentY);
+    currentY += 5;
     
 
 
@@ -276,7 +280,7 @@ async function downloadPDF() {
     doc.text(`Email: ${val(destEmail, true)}`, boxX + 2, boxY + 33);
 
     // --- Corpo testo principale ---
-    currentY += 50;
+    currentY += 30;
     doc.setFontSize(10);
     doc.setFont(undefined, 'normal');
     const intro = "Con la presente Vi trasmettiamo la nostra migliore offerta per la prestazione dei servizi di seguito indicati.";
