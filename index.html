@@ -33,64 +33,147 @@
         <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8 border border-gray-200">
             <h2 class="text-xl font-semibold text-gray-700 mb-4">Document Details</h2>
 
-            <!-- Input Fields -->
+            <!-- Company Info -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div>
-                    <label for="docTitle" class="block text-sm font-medium text-gray-700 mb-1">Title</label>
-                    <input type="text" id="docTitle" value="Draft Report Summary" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                    <label for="docCompany" class="block text-sm font-medium text-gray-700 mb-1">Ragione Sociale</label>
+                    <input type="text" id="docCompany" value="Vaccari S.r.l." class="w-full p-2 border border-gray-300 rounded-lg">
                 </div>
                 <div>
-                    <label for="docRecipient" class="block text-sm font-medium text-gray-700 mb-1">Recipient/Author</label>
-                    <input type="text" id="docRecipient" value="Project Team" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 transition duration-150">
+                    <label for="docAddress" class="block text-sm font-medium text-gray-700 mb-1">Sede Legale</label>
+                    <input type="text" id="docAddress" value="Via E.Alighieri, 2" class="w-full p-2 border border-gray-300 rounded-lg">
                 </div>
-                <div class="md:col-span-2">
-                    <label for="docContent" class="block text-sm font-medium text-gray-700 mb-1">Document Content</label>
-                    <textarea id="docContent" rows="10" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 resize-y transition duration-150">Dear Project Team,
-
-This is the initial draft of the summary report. Please review the findings below and provide your feedback by the end of the week.
-
-1. Phase 1 Completion: Successfully completed on schedule.
-2. User Feedback: Generally positive, highlighting usability.
-3. Next Steps: Focus on optimizing resource allocation for Phase 2.
-
-Thank you for your hard work.
-</textarea>
+                <div>
+                    <label for="docCity" class="block text-sm font-medium text-gray-700 mb-1">Città</label>
+                    <input type="text" id="docCity" value="35016 CADONEGHE (PD) - I" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="docPhone" class="block text-sm font-medium text-gray-700 mb-1">Telefono/Fax</label>
+                    <input type="text" id="docPhone" value="Tel: 049 5942474 - Fax 049 8982471" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="docFiscal" class="block text-sm font-medium text-gray-700 mb-1">Dati Fiscali</label>
+                    <input type="text" id="docFiscal" value="Capitale Sociale: € 100.000,00 i.v. - C.C.I.A.A. Padova N. REA 320264 - Reg.Imp.Trib.PD P.IVA IT 02856320285" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="docOfferNum" class="block text-sm font-medium text-gray-700 mb-1">Numero Offerta</label>
+                    <input type="text" id="docOfferNum" value="173/2023/SE" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="docRef" class="block text-sm font-medium text-gray-700 mb-1">Riferimento</label>
+                    <input type="text" id="docRef" value="VACCARI GIANCARLO" class="w-full p-2 border border-gray-300 rounded-lg">
+                </div>
+                <div>
+                    <label for="docDate" class="block text-sm font-medium text-gray-700 mb-1">Data</label>
+                    <input type="text" id="docDate" value="03/10/2023" class="w-full p-2 border border-gray-300 rounded-lg">
                 </div>
             </div>
 
-            <!-- Additional Editable Fields (7 total) -->
-            <div class="border-t pt-4 mt-4">
-                <h3 class="text-lg font-medium text-gray-700 mb-3">Additional Fields</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <!-- Destinatario -->
+            <div class="border-t pt-4 mt-4 mb-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-3">Destinatario</h3>
+                <div class="grid grid-cols-1 gap-4">
                     <div>
-                        <label for="docCompany" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
-                        <input type="text" id="docCompany" value="ACME Corp" class="w-full p-2 border border-gray-300 rounded-lg">
+                        <label for="destName" class="block text-sm font-medium text-gray-700 mb-1">Spettabile</label>
+                        <input type="text" id="destName" value="ECO GAIA Srl" class="w-full p-2 border border-gray-300 rounded-lg">
                     </div>
                     <div>
-                        <label for="docRef" class="block text-sm font-medium text-gray-700 mb-1">Reference #</label>
-                        <input type="text" id="docRef" value="REF-2025-001" class="w-full p-2 border border-gray-300 rounded-lg">
+                        <label for="destAddress" class="block text-sm font-medium text-gray-700 mb-1">Via</label>
+                        <input type="text" id="destAddress" value="Via Camp 2/B - Via Dante Alighieri, 2" class="w-full p-2 border border-gray-300 rounded-lg">
                     </div>
                     <div>
-                        <label for="docLocation" class="block text-sm font-medium text-gray-700 mb-1">Location</label>
-                        <input type="text" id="docLocation" value="Milan" class="w-full p-2 border border-gray-300 rounded-lg">
+                        <label for="destCity" class="block text-sm font-medium text-gray-700 mb-1">Città</label>
+                        <input type="text" id="destCity" value="35016 - CADONEGHE - PD - I" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="destContact" class="block text-sm font-medium text-gray-700 mb-1">Interlocutore</label>
+                            <input type="text" id="destContact" value="Sig. Matteo Giura" class="w-full p-2 border border-gray-300 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="destPhone" class="block text-sm font-medium text-gray-700 mb-1">Telefono/Fax</label>
+                            <input type="text" id="destPhone" value="049 2133947 - 345-6474910" class="w-full p-2 border border-gray-300 rounded-lg">
+                        </div>
                     </div>
                     <div>
-                        <label for="docPreparedBy" class="block text-sm font-medium text-gray-700 mb-1">Prepared By</label>
-                        <input type="text" id="docPreparedBy" value="N. Carra" class="w-full p-2 border border-gray-300 rounded-lg">
-                    </div>
-                    <div>
-                        <label for="docContact" class="block text-sm font-medium text-gray-700 mb-1">Contact</label>
-                        <input type="text" id="docContact" value="+39 012 345 6789" class="w-full p-2 border border-gray-300 rounded-lg">
-                    </div>
-                    <div>
-                        <label for="docShortNote" class="block text-sm font-medium text-gray-700 mb-1">Short Note</label>
-                        <input type="text" id="docShortNote" value="Confidential" class="w-full p-2 border border-gray-300 rounded-lg">
-                    </div>
-                    <div>
-                        <label for="docFooterNote" class="block text-sm font-medium text-gray-700 mb-1">Footer Note</label>
-                        <input type="text" id="docFooterNote" value="Company Internal Use Only" class="w-full p-2 border border-gray-300 rounded-lg">
+                        <label for="destEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="text" id="destEmail" value="info@eco-gaia.it" class="w-full p-2 border border-gray-300 rounded-lg">
                     </div>
                 </div>
+            </div>
+
+            <!-- Descrizione Servizio -->
+            <div class="border-t pt-4 mt-4 mb-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-3">Descrizione Servizio</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label for="serviceDesc" class="block text-sm font-medium text-gray-700 mb-1">Descrizione</label>
+                        <input type="text" id="serviceDesc" value="Trasporto di Rifiuti Speciali con Bilica Vasca" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="serviceRoute" class="block text-sm font-medium text-gray-700 mb-1">Tratta</label>
+                        <input type="text" id="serviceRoute" value="TEZZE DI ARZIGNANO (VI) - GREZZANA (VR)" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="servicePrice" class="block text-sm font-medium text-gray-700 mb-1">Prezzo</label>
+                        <input type="text" id="servicePrice" value="€/TON. 9,50+IVA" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="serviceMaterial" class="block text-sm font-medium text-gray-700 mb-1">Materiale/CER</label>
+                        <input type="text" id="serviceMaterial" value="Materiale/CER: 170504" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="serviceCIG" class="block text-sm font-medium text-gray-700 mb-1">CIG</label>
+                            <input type="text" id="serviceCIG" value="Z89156O8AD" class="w-full p-2 border border-gray-300 rounded-lg">
+                        </div>
+                        <div>
+                            <label for="serviceCUP" class="block text-sm font-medium text-gray-700 mb-1">CUP</label>
+                            <input type="text" id="serviceCUP" value="H61F11000280001" class="w-full p-2 border border-gray-300 rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condizioni -->
+            <div class="border-t pt-4 mt-4 mb-6">
+                <h3 class="text-lg font-medium text-gray-700 mb-3">Condizioni</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="condMinTax" class="block text-sm font-medium text-gray-700 mb-1">Minimo Tassabile</label>
+                        <input type="text" id="condMinTax" value="28 Ton." class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="condLoadTime" class="block text-sm font-medium text-gray-700 mb-1">Tempi Carico</label>
+                        <input type="text" id="condLoadTime" value="Ore 01 (Una)" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="condUnloadTime" class="block text-sm font-medium text-gray-700 mb-1">Tempi Scarico</label>
+                        <input type="text" id="condUnloadTime" value="Ore 01 (Una)" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="condExtraCost" class="block text-sm font-medium text-gray-700 mb-1">Extra Sosta</label>
+                        <input type="text" id="condExtraCost" value="€./Ora 65,00+IVA" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="condMuncato" class="block text-sm font-medium text-gray-700 mb-1">Mancato Carico</label>
+                        <input type="text" id="condMuncato" value="80% del Viaggio" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="condDeadline" class="block text-sm font-medium text-gray-700 mb-1">Data Fine</label>
+                        <input type="text" id="condDeadline" value="31/12/2023" class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                    <div>
+                        <label for="condPayment" class="block text-sm font-medium text-gray-700 mb-1">Pagamento</label>
+                        <input type="text" id="condPayment" value="BONIFICO BANCARIO 60 GG." class="w-full p-2 border border-gray-300 rounded-lg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testo di chiusura -->
+            <div class="border-t pt-4 mt-4 mb-6">
+                <label for="closingText" class="block text-sm font-medium text-gray-700 mb-1">Testo di chiusura</label>
+                <textarea id="closingText" rows="2" class="w-full p-3 border border-gray-300 rounded-lg">In attesa di un Vostro gradito riscontro salutiamo cordialmente.</textarea>
             </div>
 
             <!-- Download Button -->
